@@ -39,7 +39,7 @@ ctrlReservas.obtenerReservas = async (req, res) => {
 
 // Ctrl para crear una tarea
 ctrlReservas.crearReservas = async (req, res) => {
-    const { nombre, apellido,codigo } = req.body;
+    const { nombre, apellido,codigo,origen,destino,fechaSalida } = req.body;
 
     console.log('req.body')
     console.log(req.body)
@@ -71,7 +71,7 @@ ctrlReservas.crearReservas = async (req, res) => {
 // Ctrl para actualizar una tarea
 ctrlReservas.actualizarReserva = async (req, res) => {
     const { id } = req.params;
-    const { nombre, apellido,codigo } = req.body;
+    const { nombre, apellido,codigo,origen,destino,fechaSalida } = req.body;
     
     try {
         const reservaActualizada = await Reserva.update({
