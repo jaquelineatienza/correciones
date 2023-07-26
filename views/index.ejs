@@ -1,0 +1,32 @@
+<%- include('partials/header') %>
+
+<div class="container">
+
+    <div class="row mt-5">
+        <h1 class="text-center border-botton">Lista de Reservas</h1>
+        <div class="col">
+            <div class="col-md-3 mb-2">
+                <a href="/reservas/create" class="btn btn sm btn-primary">Nuevo </a>
+                <a href="/reservas" class="btn btn-info text-light">Inicio</a>
+            </div>
+            <table class="table">
+                <thead class="table-primary">
+                    <tr>
+                        <th>Código</th>
+                        <th>nombre</th>
+                        <th>apellido</th>
+                        <th>Fecha de Salida</th>
+                        <th>Destino</th>
+                        <th>origen</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="reservas">
+      
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="/js/obtener.js"></script>
+    <%- include('partials/footer') %>
